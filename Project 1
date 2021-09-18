@@ -19,7 +19,7 @@
 
 ### Exploring Host Disk Usage
 1. Describe where your Guest OS is saved and how much space it takes up
-    - It is 21GB and it already includes the memory size.
+    - It is saved under my user files in a virtual box file and it is 21GB and it already includes the memory size.
 2. Can you directly access your Guest files from the virtual machine image folder?  Why or why not?
   - I cannot, I believe that I would need to mount a shared folder that would allow for me to access shared files through that.
 3. Explore the sizes of creating "snapshots" vs. templates / clone.  What do each of these achieve?
