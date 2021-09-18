@@ -1,0 +1,12 @@
+Part 1 - Building VMs
+  I downloaded a Kali Linux virtual box image to set up my guest OS. 
+  Once downloaded all I had to do was use the add feature of virtual box and locate the image. 
+  I stuck with the recommended setting which included 2048MB of memory / RAM allocation. 
+  I did not allow for 3D acceleration and for the moment I left it to Nat for the networking. 
+  
+  Part 2 - Exploring Virtualization
+From your host, can you access the files and folders you create in the guest directory through this folder? Why or why not?
+  I cannot, I believe that I would need to mount a shared folder that would allow for me to access shared files through that.
+
+The hypervisor manages virtualized networking devices for your Guest to connect to the outside world
+  With the Nat connect through my host machine I am able to access the internet with its own IP.
