@@ -1,14 +1,6 @@
 
   # Project 1
 
-## Part 1 - Building VMs
-
-- Guest VM used: Ubuntu Linux
-- VMM (virtual machine manager / software): VirtualBox
-
-### Setting up a Ubuntu VM on a Windows 10 host
-
-- **NOTE** - think next semester, you'll take a class that needs familarity with virtual machines.  Give yourself the gift of good documentation
 
 1. Downloaded ISO from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
     - Chose the Desktop ISO to have access to a GUI interface (instead of server where terminal only)
