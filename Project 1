@@ -1,12 +1,53 @@
-Part 1 - Building VMs
-  I downloaded a Kali Linux virtual box image to set up my guest OS. 
-  Once downloaded all I had to do was use the add feature of virtual box and locate the image. 
-  I stuck with the recommended setting which included 2048MB of memory / RAM allocation. 
-  I did not allow for 3D acceleration and for the moment I left it to Nat for the networking. 
-  
-  Part 2 - Exploring Virtualization
-From your host, can you access the files and folders you create in the guest directory through this folder? Why or why not?
-  I cannot, I believe that I would need to mount a shared folder that would allow for me to access shared files through that.
 
-The hypervisor manages virtualized networking devices for your Guest to connect to the outside world
-  With the Nat connect through my host machine I am able to access the internet with its own IP.
+  # Project 1
+
+## Part 1 - Building VMs
+
+- Guest VM used: Ubuntu Linux
+- VMM (virtual machine manager / software): VirtualBox
+
+### Setting up a Ubuntu VM on a Windows 10 host
+
+- **NOTE** - think next semester, you'll take a class that needs familarity with virtual machines.  Give yourself the gift of good documentation
+
+1. Downloaded ISO from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
+    - Chose the Desktop ISO to have access to a GUI interface (instead of server where terminal only)
+        Kali Linux virtual box image
+
+2. Install VirtualBox for [Windows hosts](https://download.virtualbox.org/virtualbox/6.1.26/VirtualBox-6.1.26-145957-Win.exe)
+3. Create a new Virtual Machine - basically, determine the RAM and disk space the virtual machine will be allocated
+    - How much disk space? 2048MB flex
+    - 3D acceleration?  No 3d acceleration
+    - Guest Additions - I was not in the recomended setting so I did not include it.
+4. Install an OS to the Virtual Machine
+  -I downloaded a  to set up my guest OS. 
+  Once downloaded all I had to do was use the add feature of virtual box and locate the image. 
+
+## Part 2 - Exploring Virtualization
+
+### Exploring Host Disk Usage
+1. Describe where your Guest OS is saved and how much space it takes up
+    - It is 21GB and it already includes the memory size.
+2. Can you directly access your Guest files from the virtual machine image folder?  Why or why not?
+  - I cannot, I believe that I would need to mount a shared folder that would allow for me to access shared files through that.
+3. Explore the sizes of creating "snapshots" vs. templates / clone.  What do each of these achieve?
+    - The snapshots seems to be only a few GBs with a difference of only a few MBs depending on the version that has the old files on it or not.
+
+### Exploring Guest Networking
+
+
+- Explain your approximate networking configuration for your Host 
+  It is the basic network configuration as described bellow.
+    - modem from ISP, assigns public IP
+    - router provides DHCP private network.  Devices are connected to your router, which is your gateway
+    - your network requests to sites are routed through your router, which plugs in your public address, requests info from the world, gets the info back, then passes the request back to the device that made it (NAT - Network Address Translation)
+- Explain the network configuration for your Guest
+    - Does your guest have a network accessible address?  No it is configured for it to be reached.
+       
+
+## Part 3 - Networking with Style
+
+- Pick a networking method besides NAT, and see what it does.
+-So I have previously used Nat networking to create and internal network for my VMs so they could talk to each other.
+-I created a network that it all runed on and it did not connect to the internet. 
+
