@@ -1,5 +1,5 @@
 Container platform 1
-    Install Instruction 
+
 Docker installed on Kali
     -Sudo apt update
     -Sudo apt upgrade
@@ -13,4 +13,8 @@ Pulling and Running a container image
 Logs & Status
     -Sudo docker stats
     -sudo docker ps
+Stopping a container
+    -sudo docker pause hello-world
+    -sudo docker unpause hello-world
+    sudo docker kill hello-world
    
