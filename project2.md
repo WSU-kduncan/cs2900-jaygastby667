@@ -17,4 +17,19 @@ Stopping a container
     -sudo docker pause hello-world
     -sudo docker unpause hello-world
     sudo docker kill hello-world
-   
+
+Container platform 2
+
+Skopeo installed on Kali
+    -sudo apt-get -y install skopeo
+    -skopeo
+
+Pulling and Running a container image
+    -sudo mkdir -p /var/lib/images/busybox
+    -sudo skopeo copy docker://busybox:latest dir:/var/lib/images/busybox
+    -sudo skopeo inspect docker://busybox
+    -sudo skopeo run -d -p docker://busybox
+Logs & Status
+   -sudo skopeo inspect docker://busybox
+Stopping a container
+    -sudo skopeo delete --force docker://busybox:latest dir:/var/lib/images/busybox
