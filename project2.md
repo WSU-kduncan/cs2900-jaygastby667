@@ -35,26 +35,30 @@ Stopping a container
 
 Container platform 2
 
-Skopeo installed on Kali
+Podman installed on Kali
 
-    -sudo apt-get -y install skopeo
+    -apt install podman
     
-    -skopeo
+    -podman
 
 Pulling and Running a container image
 
-    -sudo mkdir -p /var/lib/images/busybox
+    -sudo podman pull fedora
     
-    -sudo skopeo copy docker://busybox:latest dir:/var/lib/images/busybox
+    -sudo podman run fedora
     
-    -sudo skopeo inspect docker://busybox
-    
-    -sudo skopeo run -d -p docker://busybox
+    -sudo podman run -d fedora
     
 Logs & Status
 
-   -sudo skopeo inspect docker://busybox
+   -Sudo podman stats
+    
+    -sudo podman ps
    
 Stopping a container
 
-    -sudo skopeo delete --force docker://busybox:latest dir:/var/lib/images/busybox
+    -sudo podman pause fedora
+    
+    -sudo podman unpause fedora
+    
+    sudo podman kill fedora
